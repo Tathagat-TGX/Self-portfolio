@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Tathagat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, rgba(0, 0, 40, 1) 0%, rgba(0, 128, 255, 0.4) 100%);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            padding: 0 40px;
+            background-color: rgba(18, 18, 62, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .left {
+            flex: 1;
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 400;
+            transition: color 0.3s, font-size 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.04rem;
+        }
+
+        nav .left a {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+
+        .content {
+            margin-top: 100px;
+            padding: 50px;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+            background: rgba(18, 18, 62, 0.9);
+            border-radius: 15px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 20px rgba(153, 153, 226, 0.8); /* Glowing effect */
+            min-height: 500px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            color: rgb(153, 153, 226);
+        }
+
+        p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .btn {
+            background-color: rgb(153, 153, 226);
+            color: rgb(0, 0, 33);
+            border: none;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease-in-out, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: rgb(133, 133, 206);
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        #contact {
+            margin-top: 100px;
+            padding: 50px;
+            text-align: center;
+            background-color: rgba(0, 0, 33, 0.8);
+            color: white;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: rgb(18, 18, 62);
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Adding more background effects */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://source.unsplash.com/1600x900/?galaxy,stars');
+            opacity: 0.3;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left"><a href="/">Tathagat's Portfolio</a></div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="https://github.com/Tathagat-TGX" target="_blank">Projects</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content">
+            <h1>About Me</h1>
+            <p>Hi, I'm Tathagat, a passionate coder. I am currently doing my B.E with a focus on computer science and have developed various projects showcasing my skills in front-end and back-end development. I love creating beautiful, functional websites that provide great user experiences.</p>
+            <p>I am continuously learning and improving my skills in technologies and design. With a solid foundation in HTML, CSS, JavaScript, and frameworks like React, I strive to deliver high-quality and innovative web solutions.</p>
+            <a href="https://github.com/Tathagat-TGX" class="btn" target="_blank">See My Projects</a>
+        </div>
+
+        <div id="contact">
+            <h2>Contact Me</h2>
+            <p>You can reach me via email at <a href="mailto:tathagatgupta2909@gmail.com" style="color: rgb(153, 153, 226);">tathagatgupta2909@gmail.com</a></p>
+            <p>Or by phone at <a href="tel:8810519570" style="color: rgb(153, 153, 226);">8810519570</a></p>
+            <p>Check out my GitHub profile <a href="https://github.com/Tathagat-TGX" target="_blank" style="color: rgb(153, 153, 226);">here</a> and connect with me on <a href="https://www.linkedin.com/in/tathagat-gupta-35656a29b/" target="_blank" style="color: rgb(153, 153, 226);">LinkedIn</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tathagat's Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            padding: 0 40px;
+            background-color: rgba(18, 18, 62, 0.8);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .left a {
+            text-decoration: none;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav .left a:hover {
+            color: rgb(170, 107, 228);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: rgb(170, 107, 228);
+        }
+
+        /* Home Section Styling */
+        .firstSection {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 120px 40px 50px;
+            padding: 50px;
+            background: linear-gradient(145deg, rgba(30,30,60,1) 0%, rgba(0,0,50,1) 100%);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+        }
+
+        .leftSection {
+            width: 45%;
+            padding: 20px;
+            text-align: left;
+            animation: fadeInLeft 1s ease-out;
+        }
+
+        .leftSection p {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            font-weight: bold;
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        #element {
+            color: rgb(170, 107, 228); /* Typed.js text color */
+        }
+
+        /* Button Styling */
+        .btn {
+            background-color: rgb(170, 107, 228);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 50px;
+            margin-right: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(170, 107, 228, 0.5);
+        }
+
+        .btn:hover {
+            background-color: rgb(153, 153, 226);
+            transform: translateY(-5px);
+        }
+
+        .btn-container {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+            justify-content: center; /* Center buttons on smaller screens */
+        }
+
+        /* Right Section Image */
+        .rightSection {
+            width: 45%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInRight 1s ease-out;
+        }
+
+        .rightSection img {
+            width: 100%;
+            max-width: 400px;
+            filter: drop-shadow(0 5px 20px rgba(0, 0, 0, 0.5));
+            border-radius: 15px;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeInLeft {
+            0% {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            0% {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Media Query for mobile responsiveness */
+        @media only screen and (max-width: 768px) {
+            .firstSection {
+                flex-direction: column;
+                text-align: center;
+                margin: 80px 20px;
+            }
+            .leftSection, .rightSection {
+                width: 100%;
+            }
+            .rightSection img {
+                width: 80%;
+                max-width: none; /* Allow image to scale down properly */
+            }
+            nav {
+                padding: 0 20px;
+            }
+            .leftSection p {
+                font-size: 2.5rem;
+            }
+            .btn-container {
+                flex-direction: column; /* Stack buttons vertically on small screens */
+                align-items: center; /* Center buttons */
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .leftSection p {
+                font-size: 2rem;
+            }
+            .btn {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .leftSection p {
+                font-size: 4rem;
+            }
+            .firstSection {
+                margin: 160px 80px 70px;
+                padding: 70px;
+            }
+            .rightSection img {
+                max-width: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="left">
+            <a href="#">Brand</a>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="firstSection">
+        <div class="leftSection">
+            <p>Welcome to <span class="purple">Your Site</span></p>
+            <div class="btn-container">
+                <a href="#" class="btn">Learn More</a>
+                <a href="#" class="btn">Get Started</a>
+            </div>
+        </div>
+        <div class="rightSection">
+            <img src="https://via.placeholder.com/400" alt="Placeholder Image">
+        </div>
+    </section>
+
+</body>
+</html>
